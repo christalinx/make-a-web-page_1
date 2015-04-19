@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>CodePen - A Pen by  Christoph Abplanalp</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Course notes on ND Introduction to Programming</title>
+  <link rel="stylesheet" type="text/css" href="course_notes_style.css">
+
+</head>
+
+<body>
+
+ <h1>Course notes on ND Introduction to Programming</h1>
+  <div class="lesson">
+  <h2>Lesson 1: The Basics of the Web and HTML</h2>
+    <div class="concept">
+      <div class="concept-title">
+        World Wide Web
+      </div>
+      <div class="concept-description">
+        <p>
+          The World Wide Web (WWW) consists basicaly of Hyper Text Markup Language (HTML) documents linked together by hyperlinks. The WWW was invented in the early 1990s, nowadays there are about 30 billion web pages online on the web. All type of files can be found on the web, besides HTML documents (that hold everything together), there are mainly videos, photos and music files online.
+        </p>
+      </div>
+    </div>
+    <div class="concept">
+      <div class="concept-title">
+        Major components of the web
+      </div>
+      <div class="concept-description">
+        <p>
+          The major pieces of the web are: (1) client computers with web browsers, (2) the "cloud" and (3) servers that host files. Browsers make requests via the internet to servers using the HTTP protocol (Hypter Text Transfer Protocoll). The servers respond by files, transfered through the internet and displayed by browsers.
+        </p>
+      </div>
+    </div>
+    <div class="concept">  
+      <div class="concept-title">
+        HTML
+      </div>
+      <div class="concept-description">
+        <p>
+          The heart of the web are HTML documents that hold everything together. HTML documents consists of text content, markups (how the content is formated or arranged) and of links (references to other pages or files, e.g multimedia files. Markups are made up of tags, normally in the following structure: &ltopening tag&gt content &lt/closing tag&gt. Tags can also be nested, where the content is another tag inside the tag. There are also void tags that only need opening tags but no closing tags.
+        </p>
+        <p>
+          These are the most used basic HTML tags:<br>
+        <br>
+        bold tag: &ltb&gt content &lt/b&gt makes tagged content bold
+        <br>emphasis tag: &ltem&gt content &lt/em&gt makes tagged content italic
+        <br>link tag: &lta href="wwww.udacity.com"&gt content&lt/a&gt which is an anchor tag, using the href attribute containing the url to link to.
+        <br>image tag: &ltimg src="www.xyz.com/123.jpeg" alt="alternate text"&gt
+        <br>line break tag: &ltbr&gt adds a line break (it's a void tag)<br>
+        paragraph tag: &ltp&gtcontent &lt/p&gt adds an invisible box around the paragraphed text
+        </p>
+        <p>
+          Note about white space in HTML: mltiple white space within text is turned into one single white space.
+        </p>
+        <p>
+          In HTML, there are different type of elements. Inline elements are used within a specific line of content, e.g. the &ltbr&gt tag. Block elements as the paragraph use an invisible box to define space around it. One other pair of an expample is the inline element of "&ltspan&gt &lt/span&gt" opposed to the block element "&ltdiv&gt &lt/div&gt 
+        </p>
+        <p>
+          When forgetting to set a closing tag, then everything followed by the opening tag is formated by this opening tag. Programmers often say that computers are stupid in the sense that computers only understand clear and error-less instructions (commands) and react very sensitive to typing errors...
+        </p>  
+        <p>
+          The structure of an HTML document is as follows:<br><br>
+          &lt!DOCTYPE HTML&gt<br>
+          &ltHTML&gt<br>
+          &ltHEAD&gt<br>
+          &ltBODY&gt<br>
+            tagged content<br>
+          &lt/BODY&gt<br>  
+          &lt/HEAD&gt<br>  
+          &lt/HTML&gt<br>
+        </p>
+      </div>
+    </div>
+  </div>
+  <br> 
+  <div class="lesson">
+    <h2>Lesson 2: Creating a Structured Document with HTML</h2>
+      <div class="concept">
+        <div class="concept-title">
+          Rectangular elements or boxes
+        </div>
+        <div class="concept-description">
+          <p>
+            All visible elements of a web page are rectangular, although some elements are invisible (like the 'head' element). Even round forms like circles are in fact rectangular elements (with round edges). The rectancular structure of all the elements of a web page allows to organize content in boxes and easily placing and restructuring content. In structuring a web page it is important to start with the large boxes (the main sections of a page) moving to smaller sized boxes containing different content elements like headlines, images, texts etc.)
+          </p>
+        </div>
+      </div>
+      <div class="concept">
+        <div class="concept-title">
+          HTML, CSS and DOM
+        </div>
+        <div class="concept-description">
+          <p>
+            HTML and CSS are both "languages". HTML controls the "structure" of a web page. CSS controls the "style" of a page (how it looks). By separating format from content, CSS files help implementing one of the most important principles in programming: avoiding repetition or duplication.<br><br>
+            HTML has a tree-like structure with nested tags similar to bigger and smaller branches of a tree, defined by the "DOM" (Document Object Model). When programmers talk about the DOM they are talking about the tree-like structure of a page. 
+          </p>
+        </div>  
+      </div>
+  </div>
+  <br>
+  <div class="lesson">
+	<h2>Lesson 3: Adding CSS style and HTML structure</h2>
+	  <div class="concept">
+	    <div class="concept-title">
+	      CSS: Cascading and Inheritance
+	    </div>
+	    <div class="concept-description"> 
+	     <p>
+	      	With CSS, cascading style sheets, you can define styles that are applied to every element defined, so that you can avoid repetition. Styles can be defined in different places and are applied in the following order, with definitions further down the list overwriting previous definitions: 
+	      	<ul>
+	      	<li>the default style of a browser (different browsers have slightly different styles)</li>
+	      	<li>stylesheet in a separate file (this is what you will be mostly using</li>
+	      	<li>stylesheet inside HTML (this can be done for small projects but is not ideal)</li>
+	      	<li>inline style in an element (this can also be done but should be avoided)</li>
+	      	</ul>
+	      </p>
+	      <p>
+	        "Cascading" means you keep going down into the more and more specific rules until you find the one that most specifically describes the elements. Rules are applied not only to the elements they directly match, but also to all of those elements' child elements. When rules for elements are defined on more than one level, the most specific rule is applied to every element.<br><br>
+	        Inheritance is a key feature in CSS, a mechanism by which definitions are applied not only to a specific element ("the ancestor"), but also to its nested elements ("the descendants"). Descendant elements may inherit CSS property values from any ancestor element enclosing them.
+	      </p>
+	    </div>
+	  </div>
+	  <div class="concept">
+	    <div class="concept-title">
+	      CSS definition
+	    </div>
+	    <div class="concept-description">
+	       <p>
+	      	In CSS you first write a so called "selector", for example a html tag like body or h1 or by defining a class (".class_name". This defines which elements of the page a specific style should apply to. In general it is good to use so called "semantic tags" like h1, h2 etc., pre-defined html tags available for structuring documents in order to define styles for specific types of elements (like h1).<br><br>
+	      	With CSS, style attributes are attached to specific elements. All CSS style attributes can be found in this <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">CSS reference</a>.
+	      </p>
+	      <p>There are 3 ways how to include CSS styling in a web page:
+	      <ul>
+	      	<li>Method 1: write CSS in the &lthead&gt of your HTML</li>
+	      	<li>Method 2: Link your HTML to a separate CSS file</li> (like done with this litte web page...)
+	      	<li>Method 3: Write your style inline with your HTML</li>
+	      </ul>
+	      	Method 1 is only suitable for very short projects. Method 2 is the best method since it allows to really seperate style definition from the functional code. Method 3 is not reccomended since it leads to a lot of repetition and duplicate code.
+	      </p>
+	    </div>  
+	  </div>
+	   <div class="concept">
+	    <div class="concept-title">
+	      Positioning content using the Box Model
+	    </div>
+	    <div class="concept-description">
+	     <p>
+	     Content on a web page is positioned using the box model. A web page consists of different boxes. A box is defined by 4 nested areas or components; for every of these 4 components the size or width can be defined: 
+	     <ul>
+	     	<li>content</li> 
+	     	<li>padding</li> 
+	     	<li>border</li> 
+	     	<li>margin</li> 		
+	     </ul>
+	      	A sample page displaying the box model can be found <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">here</a>.
+	      There are two techniques you can use to help deal with sizing issues of boxes. (1) Set sizes in terms of percentages rather than pixels. (2) Set the box-sizing attribute to border-box for every element. 
+	      </p>
+	    </div>  
+	   </div>
+	   <div class="concept">
+	    <div class="concept-title">
+	      Code, test and refine
+	    </div>
+	    <div class="concept-description">
+	     <p>
+	     	Software development follows these three steps over and over again:
+	     	<ol>
+	     	<li>code</li> 
+	     	<li>test</li> 
+	     	<li>refine</li> 		
+	     	</ol>
+	    	In iteration after iteration, the programmer codes a new element, then instantly tests it against the design mockup and then refines it, until it works and displays as desired or defined by the design mockup.
+	     </p>
+	     <p>
+	     	But how to get to the first code from your design mockup? You should follow these steps:
+ 			<ol>
+	     	<li>Look for natural boxes by visually boxify the design mockup to get the structure of the page</li> 
+	     	<li>Look for repeaded styles and semantic elements: identify headings, sub-headings, text content etc. by assigning tags like h1, h2 p etc.</li> 
+	     	<li>Write HTML code</li>
+	     	<li>Define the styles from biggest to smallest boxes. Define the size of the boxes (by sizing content, padding, border and margin) and position the boxes on the screen</li> 		
+	     	</ol>
+	     </p>
+	     <p>
+	     	It is very important to verify the correctness of the produced HTML and CSS code. You can do that using the these validators:
+	     	<ul>
+	     	<li>To verify HTML: <a href="http://validator.w3.org/#validate_by_input">http://validator.w3.org/#validate_by_input</a></li>
+	     	<li>To verify CSS: <a href="http://jigsaw.w3.org/css-validator/#validate_by_input">http://jigsaw.w3.org/css-validator/#validate_by_input</a></li>
+	     	</ul>
+	     </p>
+	    </div>  
+	  </div>
+  </div>
+</body>
+</html>
+
+</body>
+
+</html>
